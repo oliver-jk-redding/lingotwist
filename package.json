@@ -1,0 +1,26 @@
+{
+  "name": "lingotwist",
+  "version": "1.0.0",
+  "description": "lingotwist",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oliver-jk-redding/lingotwist.git"
+  },
+  "author": "team Ollie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oliver-jk-redding/lingotwist/issues"
+  },
+  "homepage": "https://github.com/oliver-jk-redding/lingotwist#readme",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "hbs": "^4.0.0",
+    "http": "0.0.0",
+    "path": "^0.12.7"
+  }
+}
