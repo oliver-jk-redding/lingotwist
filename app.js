@@ -17,7 +17,19 @@ app.get('/', function(req, res) {
 })
 
 app.get('/index', function(req, res) {
- res.send('hi')
+ res.render('index')
 })
+
+
+
+
+
+
+
+
+
+
+
+
 
 module.exports = app
