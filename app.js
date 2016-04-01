@@ -22,10 +22,15 @@ app.get('/index', function(req, res) {
 
 app.post('/index', function(req,res){
   var userWords = []
-  for(word in req.body)
+  for(word in req.body){
     userWords.push(req.body[word])
-  replaceWords(userWords)
+  }
+  replaceWords(userWords, function(modifiedText){
+     res.render('showText',modifiedText)
+
+  })
 })
+
 
 
 
