@@ -1,0 +1,67 @@
+ul
+{
+    list-style-type: none;
+}
+
+*{
+  margin:20px;
+}
+
+h1 {
+  font-size: 50px;
+  padding: 30px;
+  margin:0;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+input[type='text']
+{
+  font-size: 20px;
+}
+
+div
+{
+margin-left:0px;
+}
+
+span {
+ color:red;
+}
+
+.headingtitle {
+  width: 100%;
+  background-color: purple;
+  color:white;
+  margin:0;
+  position: fixed;
+  top:0;
+  left:0;
+  height: 115px;
+}
+.content-wrapper {
+  margin-top:115px;
+}
+
+p {
+  font-size: 30px;
+}
+
+.text-box {
+  width: 600px;
+  position: relative;
+}
+
+input[type='submit'] {
+  font-size: 30px;
+  padding: 10px 30px;
+  background-color: green;
+  color:white;
+  border-radius: 20px;
+}
