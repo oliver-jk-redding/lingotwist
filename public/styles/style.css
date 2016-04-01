@@ -57,3 +57,11 @@ p {
   width: 600px;
   position: relative;
 }
+
+input[type='submit'] {
+  font-size: 30px;
+  padding: 10px 30px;
+  background-color: green;
+  color:white;
+  border-radius: 20px;
+}
