@@ -2,22 +2,28 @@ var request = require("superagent")
 // var dotenv = require("dotenv")
 var fs = require("fs")
 
-request.get("https://www.googleapis.com/books/v1/volumes?q=harry+potter",function(req,res){
-  //console.log(JSON.parse(res.text).items[0].volumeInfo.description)
-  //console.log(res.text)
-  fs.writeFile("./data.json",JSON.parse(res.text).items[0].volumeInfo.description,"utf8")
-  replaceWords(JSON.parse(res.text).items[0].volumeInfo.description)
-})
+function lingotwist(userWords, callback) {
+  request.get("https://www.googleapis.com/books/v1/volumes?q=harry+potter",function(req,res){
+    // fs.writeFile("./data.json",JSON.parse(res.text).items[0].volumeInfo.description,"utf8")
+    var data = JSON.parse(res.text).items[0].volumeInfo.description
+    replaceWords(data, userWords, callback)
+  })
+}
 
-function replaceWords(data){
 
+
+
+function replaceWords(data, userWords, callback){
   var nounsToBeReplaced = ["hand","Harry","seal","wizard","snake","badger"]
-  var userWords = ["sausage","dog","japan","nerd","Yankie","cats"]
+  // var userWords = ["sausage","dog","japan","nerd","Yankie","cats"]
   var count = 0;
 
-  data = data.split(" ");
-  for(i=0;i<data.length;i++){
-      data[data.indexOf(nounsToBeReplaced[i])] = userWords[i]
-      }
-console.log(data.join(" ").toString())
+  for (var i=0; i<nounsToBeReplaced.length; i++) {
+    var word = nounsToBeReplaced[i]
+    var wordRegexp = new RegExp(word, 'img')
+    data = data.replace( wordRegexp, userWords[i])
+  }
+  var JSONObject = {"modifiedText":data}
+  callback(JSONObject)
 }
+
