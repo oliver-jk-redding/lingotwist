@@ -25,10 +25,11 @@ app.post('/index', function(req,res){
   for(word in req.body){
     userWords.push(req.body[word])
   }
-  replaceWords(userWords, function(modifiedText){
-     res.render('showText',modifiedText)
+  // replaceWords(userWords, function(modifiedText){
+    var modifiedText = {"greeting":"goodbye"}
+       res.render('showText',modifiedText)
 
-  })
+  // })
 })
 
 
