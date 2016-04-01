@@ -1,7 +1,7 @@
 var express = require('express');
 var path = require('path');
 var bodyParser = require('body-parser');
-
+var lingotwist = require('./index.js')
 var app = express();
 
 // view engine setup
@@ -30,17 +30,6 @@ app.post('/index', function(req,res){
      res.render('showText',modifiedText)
   })
 })
-
-
-
-
-
-
-
-
-
-
-
 
 
 module.exports = app

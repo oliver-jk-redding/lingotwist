@@ -27,3 +27,4 @@ function replaceWords(data, userWords, callback){
   callback(JSONObject)
 }
 
+module.exports = lingotwist
