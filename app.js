@@ -20,6 +20,12 @@ app.get('/index', function(req, res) {
  res.render('index')
 })
 
+app.post('/index', function(req,res){
+  var userWords = []
+  for(word in req.body)
+    userWords.push(req.body[word])
+  replaceWords(userWords)
+})
 
 
 
